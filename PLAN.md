@@ -18,3 +18,11 @@ A cubic Bézier curve will form a gentle smile.
 
 I will choose the portrait whose expression and main visual
 details are easiest to recognize at a small size.
+
+## Exploration Status
+
+A: Explored on branch A. The portrait uses 120 loop-generated freckles, round eyes, and a wide smile, as planned.
+B: Explored on branch B. The portrait uses two distinct SVG image files for cat ears and a bow tie.
+C: Explored on branch C. The portrait uses an orange-to-purple gradient and a cubic Bézier smile, as planned.
+All three alternatives have been explored. None has been merged
+or selected yet.
