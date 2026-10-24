@@ -1,11 +1,14 @@
+import earsUrl from "./assets/cat-ears.svg?no-inline";
+import bowUrl from "./assets/bow-tie.svg?no-inline";
 const portrait = document.querySelector<HTMLDivElement>("#portrait")!;
 const spin = document.querySelector<HTMLButtonElement>("#spin")!;
-
-// The prototype grew inline. Keep it this way until the refactoring checkpoint.
 const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 face.setAttribute("viewBox", "0 0 200 200");
 face.setAttribute("role", "img");
-face.setAttribute("aria-label", "A neutral face");
+face.setAttribute(
+  "aria-label",
+  "A playful cat character with pink ears and a red bow tie",
+);
 
 const head = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
 head.setAttribute("cx", "100");
@@ -58,6 +61,31 @@ mouth.setAttribute("stroke", "#302c29");
 mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
+// cat-ears.svg: created with ChatGPT assistance using SVG code.
+// Source: this conversation; no third-party image used.
+const earsImage = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "image",
+);
+earsImage.setAttribute("href", earsUrl);
+earsImage.setAttribute("x", "20");
+earsImage.setAttribute("y", "0");
+earsImage.setAttribute("width", "160");
+earsImage.setAttribute("height", "60");
+face.append(earsImage);
+
+// bow-tie.svg: created with ChatGPT assistance using SVG code.
+// Source: this conversation; no third-party image used.
+const bowImage = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "image",
+);
+bowImage.setAttribute("href", bowUrl);
+bowImage.setAttribute("x", "65");
+bowImage.setAttribute("y", "166");
+bowImage.setAttribute("width", "70");
+bowImage.setAttribute("height", "28");
+face.append(bowImage);
 
 portrait.append(face);
 
